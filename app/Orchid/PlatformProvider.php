@@ -105,4 +105,13 @@ class PlatformProvider extends OrchidServiceProvider
                 ->addPermission('platform.systems.users', __('Users')),
         ];
     }
+
+    public function registerMainMenu(): array
+{
+    return [
+        Menu::make('Tasks')
+            ->icon('list')
+            ->route('platform.tasks'),
+    ];
+}
 }
